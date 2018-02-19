@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    mavenCentral()
+}
+
+dependencies {
+   
+    runtime group:'com.github.scribejava', name:'scribejava-apis', version: '4.1.1'
+    
+    compile 'javax:javaee-api:7.0'
+    compile group:'com.github.scribejava', name:'scribejava-apis', version: '4.1.1'
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+}
